@@ -1,15 +1,6 @@
-[[plugins]]
-  package = "netlify-plugin-gatsby-cache"
-
-[build.environment]
-  NODE_VERSION = "16.20.2"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Permissions-Policy = "interest-cohort=()"
-    Access-Control-Allow-Origin = "*"
-
 [build]
   publish = "public"
   command = "npm run build"
+[build.environment]
+  YARN_VERSION = "1.17.3"
+  YARN_FLAGS = "--no-ignore-optional"

@@ -1,33 +1,32 @@
 const siteMetadata = require('./site-metadata.json')
-const path = require(`path`)
 
 const FileSystem = [
   {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `blog`,
-      path: `${__dirname}/content/blog`,
+      path: `./content/blog`,
     },
   },
   {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `galleries`,
-      path: `${__dirname}/content/galleries`,
+      path: `./content/galleries`,
     },
   },
   {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `images`,
-      path: `${__dirname}/content/images`,
+      path: `./content/images`,
     },
   },
   {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `data`,
-      path: `${__dirname}/content/data/`,
+      path: `./content/data/`,
     },
   },
 ]
@@ -179,7 +178,7 @@ const SEO = [
 
 const Optimizations = [ 
   {
-    //resolve: `gatsby-plugin-netlify-cache`,
+    resolve: `gatsby-plugin-netlify-cache`,
     options: {
       cachePublic: true
     }
