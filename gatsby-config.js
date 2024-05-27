@@ -5,28 +5,28 @@ const FileSystem = [
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `blog`,
-      path: `./content/blog`,
+      path: `${__dirname}/content/blog`,
     },
   },
   {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `galleries`,
-      path: `./content/galleries`,
+      path: `${__dirname}/content/galleries`,
     },
   },
   {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `images`,
-      path: `./content/images`,
+      path: `${__dirname}/content/images`,
     },
   },
   {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `data`,
-      path: `./content/data/`,
+      path: `${__dirname}/content/data/`,
     },
   },
 ]
@@ -178,7 +178,7 @@ const SEO = [
 
 const Optimizations = [ 
   {
-    resolve: `gatsby-plugin-netlify-cache`,
+    //resolve: `gatsby-plugin-netlify-cache`,
     options: {
       cachePublic: true
     }
