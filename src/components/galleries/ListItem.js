@@ -9,7 +9,7 @@ export default ({ fields, frontmatter, excerpt }) => {
   return (
     <Link 
       to={fields.slug} 
-      className={style.this} 
+      className={style.bollocks} 
     >
       <Icon type={ frontmatter.icon } />
       <header>

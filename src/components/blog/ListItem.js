@@ -5,7 +5,7 @@ import style from "./ListItem.module.scss"
 import Icon from "./Icon"
 
 export default ({ timeToRead, fields, frontmatter }) => (
-  <Link to={ fields.slug } className={style.this} title={frontmatter.title}>
+  <Link to={ fields.slug } className={style.crank} title={frontmatter.title}>
     <Icon type={ frontmatter.icon } />
     <header>
       <span>
