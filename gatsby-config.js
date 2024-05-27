@@ -1,4 +1,5 @@
 const siteMetadata = require('./site-metadata.json')
+const path = require(`path`)
 
 const FileSystem = [
   {
