@@ -23,7 +23,7 @@ export default ({ children, path }) => (
 )
 
 const Layout = ({ children, path }) => (
-  <div className={style.content}>
+  <div className={style.layoutcontent}>
     <Menu path={path} />
     <div className={style.body}>
       <div>

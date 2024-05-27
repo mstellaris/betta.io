@@ -38,7 +38,9 @@ const Styling = [
       pathToConfigModule: `src/utils/typography.js`,
     },
   },
-  `gatsby-plugin-sass`
+  {
+    resolve: `gatsby-plugin-sass`,
+  },
 ]
 
 const Images = [
