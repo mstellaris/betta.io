@@ -1,6 +1,6 @@
 import React from "react"
 import TalksListItem from "./ListItem"
-import style from "./List.module.scss"
+import * as style from "./List.module.scss"
 
 const TalksList = ({ talks, title }) => (
   <div className={ style.list }>

@@ -1,10 +1,8 @@
 import React from "react"
 import Img from "gatsby-image"
 import ReactMarkdown from 'react-markdown'
-
 import Icon from "./Icon"
-
-import style from './Bio.module.scss'
+import * as style from './Bio.module.scss'
 
 const Bio = ({
   bio,

@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "../Link"
-import style from "./ListItem.module.scss"
+import * as style from "./ListItem.module.scss"
 import Icon from "../blog/Icon"
 
 const GalleriesListItem = ({ fields, frontmatter, excerpt }) => {

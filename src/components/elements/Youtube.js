@@ -1,7 +1,6 @@
 import React from "react"
 import ResponsiveEmbed from 'react-responsive-embed'
-
-import style from './Youtube.module.scss'
+import * as style from './Youtube.module.scss'
 
 const Youtube = ({ id }) => (
   <div className={style.youtube}>

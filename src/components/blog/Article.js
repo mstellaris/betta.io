@@ -1,10 +1,8 @@
 import React from "react"
-
 import Icon from "./Icon"
 import Disqus from "./Disqus"
-
 import { render } from '../../utils/rehype-render'
-import style from "./Article.module.scss"
+import * as style from "./Article.module.scss"
 import { Link } from "gatsby"
 
 const Article = ({ 
@@ -33,7 +31,7 @@ const Article = ({
           </small>
         </h1>
       </header>
-      <div className={style.content}>{ render(htmlAst) }</div>
+      <div className={style.article}>{ render(htmlAst) }</div>
       <Disqus config={disqusConfig} />
     </div>
   )

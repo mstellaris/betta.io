@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Head from './Head'
 import Menu from './Menu'
-import style from "./Layout.module.scss"
+import * as style from "./Layout.module.scss"
 import 'typeface-roboto'
 
 const PagesLayout = ({ children, path }) => (

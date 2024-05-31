@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { DiscussionEmbed } from 'disqus-react'
-
 import { MdChevronRight } from 'react-icons/md' 
-
-import style from "./Disqus.module.scss"
+import * as style from "./Disqus.module.scss"
 
 const Disqus = ({
   config

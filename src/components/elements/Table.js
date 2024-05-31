@@ -1,6 +1,5 @@
 import React from 'react'
-
-import style from './Table.module.scss'
+import * as style from './Table.module.scss'
 
 const Table = ({
   children

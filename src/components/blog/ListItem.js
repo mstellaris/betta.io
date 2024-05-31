@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import style from "./ListItem.module.scss"
+import * as style from "./ListItem.module.scss"
 import Icon from "./Icon"
 
 const BlogListItem = ({ timeToRead, fields, frontmatter }) => (

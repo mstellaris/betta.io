@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Link from "../Link"
-import style from "./ListItem.module.scss"
+import * as style from "./ListItem.module.scss"
 import Icon from "../blog/Icon"
 import Flag from 'react-world-flags'
 

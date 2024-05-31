@@ -1,9 +1,7 @@
 import React from "react"
-
 import Icon from "../blog/Icon"
-
 import { render } from '../../utils/rehype-render'
-import style from "./Gallery.module.scss"
+import * as style from "./Gallery.module.scss"
 import { Link } from "gatsby"
 
 const Gallery = ({ 
@@ -21,7 +19,7 @@ const Gallery = ({
           </small>
         </h1>
       </header>
-      <div className={style.content}>{ render(htmlAst) }</div>
+      <div className={style.gallery}>{ render(htmlAst) }</div>
     </div>
   )
 }

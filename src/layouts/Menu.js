@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { FiBook, FiHome, FiMenu, FiBriefcase, FiGlobe, FiMoreVertical } from 'react-icons/fi' 
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-import style from './Menu.module.scss'
+import * as style from './Menu.module.scss'
 
 const Menu = ({ path, image }) => {
 

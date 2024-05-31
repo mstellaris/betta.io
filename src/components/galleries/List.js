@@ -1,6 +1,6 @@
 import React from "react"
 import GalleriesListItem from "./ListItem"
-import style from "./List.module.scss"
+import * as style from "./List.module.scss"
 import { Link } from "gatsby"
 
 const GalleriesList = ({ galleries, title }) => (
