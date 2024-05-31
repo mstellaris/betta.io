@@ -1,12 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-
 import { Helmet } from "react-helmet"
-
 import Layout from "../layouts/Layout"
 import Article from '../components/blog/Article'
 
-export default ({ data: { site, article } }) => (
+const ArticlesPosts = ({ data: { site, article } }) => (
   <Layout>
     <Helmet>
       <title>{article.frontmatter.title}</title>
@@ -35,6 +33,8 @@ export default ({ data: { site, article } }) => (
     <Article {...article} />
   </Layout>
 )
+
+export default ArticlesPosts;
 
 export const query = graphql`
   query($slug: String!) {

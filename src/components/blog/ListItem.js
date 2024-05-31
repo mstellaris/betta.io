@@ -1,10 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import style from "./ListItem.module.scss"
 import Icon from "./Icon"
 
-export default ({ timeToRead, fields, frontmatter }) => (
+const BlogListItem = ({ timeToRead, fields, frontmatter }) => (
   <Link to={ fields.slug } className={style.crank} title={frontmatter.title}>
     <Icon type={ frontmatter.icon } />
     <header>
@@ -18,3 +17,5 @@ export default ({ timeToRead, fields, frontmatter }) => (
     </header>
   </Link>
 )
+
+export default BlogListItem;

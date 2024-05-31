@@ -3,7 +3,6 @@ import { StaticQuery, graphql } from "gatsby"
 import { FiBook, FiHome, FiMenu, FiBriefcase, FiGlobe, FiMoreVertical } from 'react-icons/fi' 
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-
 import style from './Menu.module.scss'
 
 const Menu = ({ path, image }) => {
@@ -14,7 +13,7 @@ const Menu = ({ path, image }) => {
     <>
       <div className={style.menu} data-path={path}>
         <div>
-          <button className={style.toggle} onClick={() => setShowSidebar(true)} title='Show sidebar'>
+          <button className={style.toggle} onClick={() => setShowSidebar(true)} aria-label='Show sidebar'>
             <FiMenu />
           </button>
           <Img fixed={image.fixed} className={style.avatar} />
@@ -34,7 +33,8 @@ const Menu = ({ path, image }) => {
           onKeyDown={() => setShowSidebar(false)} 
           role='button' 
           tabIndex='0'
-          title='Hide sidebar'></div>
+          title='Hide sidebar'
+          aria-label='hide sidebar'></div>
         <ul>
           <li>
             <Link to='/' 
@@ -110,7 +110,7 @@ const Menu = ({ path, image }) => {
 }
 
 
-export default (props) => (
+const ChildImage = (props) => (
   <StaticQuery
     query={query}
     render={(data => (
@@ -118,6 +118,8 @@ export default (props) => (
     ))}
   />
 )
+
+export default ChildImage;
 
 const query = graphql`
   query {

@@ -1,12 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-
 import { Helmet } from "react-helmet"
-
 import Layout from "../layouts/Layout"
 import List from '../components/blog/List'
 
-export default ({ data, pageContext: { slug } }) => (
+const ArticlesByDatePosts = ({ data, pageContext: { slug } }) => (
   <Layout>
     <Helmet>
       <title>{ slug.replace('/blog/', 'Blog Posts for ') }</title>
@@ -15,6 +13,8 @@ export default ({ data, pageContext: { slug } }) => (
       title={slug.replace('/blog/', '')} />
   </Layout>
 )
+
+export default ArticlesByDatePosts;
 
 export const query = graphql`
   query($slug: String!) {

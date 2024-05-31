@@ -1,10 +1,9 @@
 import React from "react"
-
-import ListItem from "./ListItem"
+import GalleriesListItem from "./ListItem"
 import style from "./List.module.scss"
 import { Link } from "gatsby"
 
-export default ({ galleries, title }) => (
+const GalleriesList = ({ galleries, title }) => (
   <div className={ style.list }>
     <header><span>{ title || "Developer Experience Design Patterns" }</span></header>
 
@@ -22,7 +21,9 @@ export default ({ galleries, title }) => (
     </div>
 
     { galleries.map(gallery => (
-      <ListItem {...gallery} key={gallery.id} />
+      <GalleriesListItem {...gallery} key={gallery.id} />
     ))}
   </div>
 )
+
+export default GalleriesList;

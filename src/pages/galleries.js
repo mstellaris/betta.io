@@ -1,15 +1,15 @@
 import React from "react"
 import { graphql } from 'gatsby'
-
 import Layout from "../layouts/Layout"
 import List from "../components/galleries/List"
 
-export default ({ data, path }) => (
+const GalleriesPage = ({ data, path }) => (
   <Layout path={path}>
     <List galleries={data.galleries.nodes} />
   </Layout>
 )
 
+export default GalleriesPage;
 
 export const query = graphql`
   query {

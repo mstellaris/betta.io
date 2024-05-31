@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react"
 import Link from "../Link"
-
 import style from "./ListItem.module.scss"
 import Icon from "../blog/Icon"
 import Flag from 'react-world-flags'
 
-export default ({ url, conference, conference_url, title, country, date, icon }) => {
+const TalksListItem = ({ url, conference, conference_url, title, country, date, icon }) => {
   
   const [expired, setExpired] = useState(true)
   
@@ -39,3 +38,5 @@ export default ({ url, conference, conference_url, title, country, date, icon })
     </Link>
   )
 }
+
+export default TalksListItem;

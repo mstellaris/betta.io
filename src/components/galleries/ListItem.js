@@ -1,10 +1,9 @@
 import React from "react"
 import Link from "../Link"
-
 import style from "./ListItem.module.scss"
 import Icon from "../blog/Icon"
 
-export default ({ fields, frontmatter, excerpt }) => {
+const GalleriesListItem = ({ fields, frontmatter, excerpt }) => {
   
   return (
     <Link 
@@ -22,3 +21,5 @@ export default ({ fields, frontmatter, excerpt }) => {
     </Link>
   )
 }
+
+export default GalleriesListItem;

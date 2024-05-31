@@ -1,8 +1,10 @@
 import React from "react"
 import * as FIIcons from 'react-icons/fi' 
 
-export default ({ type }) => {
+const BlogIcons = ({ type }) => {
   let Component = FIIcons[`Fi${type}`]
   if (Component === undefined) { Component = FIIcons['FiCode'] }
   return <Component />
 }
+
+export default BlogIcons;

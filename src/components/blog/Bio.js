@@ -16,9 +16,9 @@ const Bio = ({
     <ReactMarkdown source={ bio.description } />
 
     <div className={style.icons}>
-      <a href='https://gr4vy.com/'><Icon type='Briefcase' /></a>
-      <a href='https://twitter.com/cbetta'><Icon type='Twitter' /></a>
-      <a href='https://linkedin.com/in/cbetta'><Icon type='Linkedin' /></a>
+      <a href='https://gr4vy.com/' aria-label="briefcase" ><Icon type='Briefcase' /></a>
+      <a href='https://twitter.com/cbetta' aria-label="twitter" ><Icon type='Twitter' /></a>
+      <a href='https://linkedin.com/in/cbetta' aria-label="linkedin"><Icon type='Linkedin' /></a>
     </div>
   </div>
 )

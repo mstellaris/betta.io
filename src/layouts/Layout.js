@@ -1,14 +1,11 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-
 import Head from './Head'
 import Menu from './Menu'
-
 import style from "./Layout.module.scss"
-
 import 'typeface-roboto'
 
-export default ({ children, path }) => (
+const PagesLayout = ({ children, path }) => (
   <StaticQuery
     query={query}
     render={(data => (
@@ -21,6 +18,8 @@ export default ({ children, path }) => (
     ))}
   />
 )
+
+export default PagesLayout;
 
 const Layout = ({ children, path }) => (
   <div className={style.layoutcontent}>
