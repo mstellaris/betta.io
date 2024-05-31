@@ -11,7 +11,7 @@ const Bio = ({
   <div className={style.bio}>
     <Img fixed={image.childImageSharp.fixed} />
     <header><span>{ bio.title }</span></header>
-    <ReactMarkdown source={ bio.description } />
+    <ReactMarkdown children={ bio.description } />
 
     <div className={style.icons}>
       <a href='https://gr4vy.com/' aria-label="briefcase" ><Icon type='Briefcase' /></a>
