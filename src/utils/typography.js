@@ -1,7 +1,7 @@
 import Typography from "typography"
 import theme from 'typography-theme-github'
 
-export default new Typography({
+export default Typography({
   ...theme,
   baseFontSize: "16px",
   headerColor: '#151E25',

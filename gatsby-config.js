@@ -159,12 +159,7 @@ const PWA = [
       icon: "content/images/icon.png",
     },
   },
-  {
-    resolve: `gatsby-plugin-offline`,
-    options: {
-      navigateFallbackWhitelist: [/\/$/],
-    }
-  }
+    `gatsby-plugin-offline`
 ]
 
 const SEO = [
