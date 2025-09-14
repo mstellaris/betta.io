@@ -28,6 +28,20 @@ Privacy defaults
 - Respects Do Not Track (`respectDNT: true`)
 - Excludes the offline shell route from tracking
 
+## Robots.txt
+
+The site generates `robots.txt` via `gatsby-plugin-robots-txt`.
+- Default policy allows all: `User-agent: *` and `Allow: /`.
+- Sitemap is advertised at `/sitemap-index.xml`.
+
+## Security Headers
+
+Security headers are configured in `netlify.toml` (applied by Netlify):
+- HSTS, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy
+- CSP is currently in Report-Only mode; adjust or enforce as needed
+  - Edit the `Content-Security-Policy-Report-Only` value in `netlify.toml`
+  - Switch to `Content-Security-Policy` to enforce once validated
+
 ## License
 
 This library is released under the [MIT License](LICENSE).

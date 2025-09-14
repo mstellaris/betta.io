@@ -188,6 +188,19 @@ const Analytics = process.env.GATSBY_GA_MEASUREMENT_ID ? [
   }
 ] : []
 
+const Robots = [
+  {
+    resolve: `gatsby-plugin-robots-txt`,
+    options: {
+      host: siteMetadata.siteUrl,
+      sitemap: `${siteMetadata.siteUrl}/sitemap-index.xml`,
+      policy: [
+        { userAgent: '*', allow: '/' }
+      ]
+    }
+  }
+]
+
 const Optimizations = [ 
   `gatsby-plugin-netlify`,
 ]
@@ -214,6 +227,7 @@ module.exports = {
     ...Feed,
     ...PWA,
     ...Analytics,
+    ...Robots,
     ...SEO,
     ...Optimizations,
   ],
