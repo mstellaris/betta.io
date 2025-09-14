@@ -18,6 +18,7 @@
 - `npm run build` — production build to `public/`.
 - `npm run serve` — serve the production build locally.
 - Optional: `pip install -r requirements.txt` for font/subfont tasks.
+- Analytics (GA4): set `GATSBY_GA_MEASUREMENT_ID` in your env/Netlify to enable analytics via `gatsby-plugin-google-gtag`.
 
 ## Coding Style & Naming Conventions
 - JavaScript/React with 2‑space indentation; prefer single quotes/backticks; no trailing semicolons.

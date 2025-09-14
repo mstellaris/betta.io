@@ -163,13 +163,27 @@ const PWA = [
 
 const SEO = [
   `gatsby-plugin-sitemap`,
+]
+
+// Enable GA4 (gtag) only when a measurement ID is provided
+const Analytics = process.env.GATSBY_GA_MEASUREMENT_ID ? [
   {
-    resolve: `gatsby-plugin-google-analytics`,
+    resolve: `gatsby-plugin-google-gtag`,
     options: {
-      trackingId: `UA-2925354-7`,
+      trackingIds: [process.env.GATSBY_GA_MEASUREMENT_ID],
+      gtagConfig: {
+        anonymize_ip: true,
+      },
+      pluginConfig: {
+        head: true,
+        respectDNT: true,
+        exclude: [
+          `/offline-plugin-app-shell-fallback/`,
+        ],
+      },
     },
   }
-]
+] : []
 
 const Optimizations = [ 
   `gatsby-plugin-netlify`,
@@ -196,6 +210,7 @@ module.exports = {
     ...Data,
     ...Feed,
     ...PWA,
+    ...Analytics,
     ...SEO,
     ...Optimizations,
   ],
