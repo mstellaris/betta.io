@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from 'gatsby'
 import Layout from "../layouts/Layout"
 import List from "../components/galleries/List"
+import site from "../../site-metadata.json"
 
 const GalleriesPage = ({ data, path }) => (
   <Layout path={path}>
@@ -34,3 +35,7 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = () => (
+  <title>Galleries - {site.title}</title>
+)

@@ -1,6 +1,5 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Head from './Head'
 import Menu from './Menu'
 import * as style from "./Layout.module.scss"
 import 'typeface-roboto'
@@ -10,7 +9,6 @@ const PagesLayout = ({ children, path }) => (
     query={query}
     render={(data => (
       <>
-        <Head { ...data } path={path} />
         <Layout { ...data } path={path}>
           { children }
         </Layout>

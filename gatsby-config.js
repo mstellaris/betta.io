@@ -161,7 +161,6 @@ const PWA = [
 ]
 
 const SEO = [
-  `gatsby-plugin-react-helmet`,
   `gatsby-plugin-sitemap`,
   {
     resolve: `gatsby-plugin-google-analytics`,
@@ -173,7 +172,6 @@ const SEO = [
 
 const Optimizations = [ 
   `gatsby-plugin-netlify`,
-  `gatsby-plugin-force-trailing-slashes`,
 ]
 
 const Data = [
@@ -186,6 +184,7 @@ const Galleries = [
 
 module.exports = {
   siteMetadata,
+  trailingSlash: 'always',
   plugins: [
     ...FileSystem,
     ...Styling,

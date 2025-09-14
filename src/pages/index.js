@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from 'gatsby'
 import Layout from "../layouts/Layout"
+import site from "../../site-metadata.json"
 import List from "../components/blog/List"
 import Bio from "../components/blog/Bio"
 
@@ -50,3 +51,14 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = () => (
+  <>
+    <html lang="en-US" />
+    <title>{site.title}</title>
+    <meta name="description" content={site.description} />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="alternate" type="application/rss+xml" href="https://betta.io/atom.xml" />
+  </>
+)

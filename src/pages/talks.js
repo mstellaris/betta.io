@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from 'gatsby'
 import Layout from "../layouts/Layout"
 import List from "../components/talks/List"
+import site from "../../site-metadata.json"
 
 const TalksPage = ({ data, path }) => (
   <Layout path={path}>
@@ -30,3 +31,7 @@ export const query = graphql`
   }
   
 `
+
+export const Head = () => (
+  <title>Talks - {site.title}</title>
+)
