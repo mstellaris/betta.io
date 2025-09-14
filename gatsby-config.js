@@ -40,6 +40,9 @@ const Styling = [
   },
   {
     resolve: `gatsby-plugin-sass`,
+    options: {
+      implementation: require('sass-embedded')
+    }
   },
 ]
 
