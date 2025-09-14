@@ -3,6 +3,9 @@
   "description": "Betta.io",
   "private": true,
   "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0",
     "start": "gatsby develop",

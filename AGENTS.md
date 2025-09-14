@@ -8,7 +8,7 @@
   - `components/`, `layouts/`, `utils/`, `css/`.
 - `plugins/` — local Gatsby plugins: `blog-create-pages`, `galleries-create-pages`.
 - `static/` for redirects and static assets; `public/` and `.cache/` are build artifacts.
-- Config: `gatsby-config.js`, `site-metadata.json`, `netlify.toml`, `.nvmrc` (Node 18.20.3).
+- Config: `gatsby-config.js`, `site-metadata.json`, `netlify.toml`, `.nvmrc` (Node 22 LTS).
 
 ## Build, Test, and Development Commands
 - `nvm use` — select the repo’s Node version.
