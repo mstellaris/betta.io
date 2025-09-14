@@ -1,4 +1,4 @@
-@import '../css/variables.scss';
+@use '../css/variables' as *;
 
 .layoutcontent {    
   background-color: $white;  
