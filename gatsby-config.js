@@ -53,7 +53,6 @@ const Markdown = [
     resolve: `gatsby-transformer-remark`,
     options: {
       gfm: true,
-      commonmark: true,
       plugins: [
         'gatsby-remark-autolink-headers',
         {
@@ -61,7 +60,6 @@ const Markdown = [
           options: {
             maxWidth: 600,
             withWebp: true,
-            tracedSVG: true,
             quality: 50
           },
         },
@@ -106,7 +104,7 @@ const Feed = [
           query: `
             {
               allMarkdownRemark(
-                sort: { order: DESC, fields: [frontmatter___date] }
+                sort: { frontmatter: { date: DESC } }
                 filter: {
                   frontmatter: { draft: { ne: true } }
                   fileAbsolutePath: { regex: "content/blog/" }

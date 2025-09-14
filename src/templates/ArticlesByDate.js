@@ -19,7 +19,7 @@ export default ArticlesByDatePosts;
 export const query = graphql`
   query($slug: String!) {
     articles: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: { draft: { ne: true } }
         fields:{slug:{regex: $slug}}

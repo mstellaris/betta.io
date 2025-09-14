@@ -14,7 +14,7 @@ export default TalksPage;
 export const query = graphql`
   query {
     talks: allTalksYaml(
-      sort: { fields: [date], order: DESC }
+      sort: { date: DESC }
     ) {
       nodes {
         conference

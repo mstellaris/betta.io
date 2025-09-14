@@ -14,7 +14,7 @@ export default GalleriesPage;
 export const query = graphql`
   query {
     galleries: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: { draft: { ne: true } }
         fileAbsolutePath: { regex: "content/galleries/" }
