@@ -44,6 +44,7 @@ const Styling = [
 ]
 
 const Images = [
+  `gatsby-plugin-image`,
   `gatsby-plugin-sharp`,
   `gatsby-transformer-sharp`
 ]

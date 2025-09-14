@@ -22,9 +22,7 @@ export const query = graphql`
     }
     image: file(relativePath: { eq: "cbetta.jpg" }) {
       childImageSharp {
-        fixed(width: 150) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
+        gatsbyImageData(width: 150, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
     articles: allMarkdownRemark(

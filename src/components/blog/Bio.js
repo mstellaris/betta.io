@@ -1,5 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import ReactMarkdown from 'react-markdown'
 import Icon from "./Icon"
 import * as style from './Bio.module.scss'
@@ -9,7 +9,7 @@ const Bio = ({
   image
 }) => (
   <div className={style.bio}>
-    <Img fixed={image.childImageSharp.fixed} />
+    <GatsbyImage image={image.childImageSharp.gatsbyImageData} alt="Portrait of Cristiano Betta" />
     <header><span>{ bio.title }</span></header>
     <ReactMarkdown children={ bio.description } />
 

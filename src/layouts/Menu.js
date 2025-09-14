@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { StaticQuery, graphql } from "gatsby"
 import { FiBook, FiHome, FiMenu, FiBriefcase, FiGlobe, FiMoreVertical } from 'react-icons/fi' 
 import { Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import * as style from './Menu.module.scss'
 
 const Menu = ({ path, image }) => {
@@ -16,7 +16,7 @@ const Menu = ({ path, image }) => {
           <button className={style.toggle} onClick={() => setShowSidebar(true)} aria-label='Show sidebar'>
             <FiMenu />
           </button>
-          <Img fixed={image.fixed} className={style.avatar} />
+          <GatsbyImage image={image} className={style.avatar} alt="Cristiano Betta" />
           <Link 
             to='/' 
             className={style.home} 
@@ -114,7 +114,7 @@ const ChildImage = (props) => (
   <StaticQuery
     query={query}
     render={(data => (
-      <Menu {...props} image={data.image.childImageSharp} />
+      <Menu {...props} image={data.image.childImageSharp.gatsbyImageData} />
     ))}
   />
 )
@@ -125,11 +125,8 @@ const query = graphql`
   query {
     image: file(relativePath: { eq: "cbetta.jpg" }) {
       childImageSharp {
-        fixed(width: 20) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
+        gatsbyImageData(width: 20, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
   }
 `;
-
