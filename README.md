@@ -8,7 +8,7 @@ The site and content for [betta.io](https://betta.io).
 
 ## Development
 
-Run `yarn start` to start the local development server.
+Run `npm run start` to start the local development server.
 
 ## Deployment
 
