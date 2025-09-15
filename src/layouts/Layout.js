@@ -2,7 +2,8 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Menu from './Menu'
 import * as style from "./Layout.module.scss"
-import 'typeface-roboto'
+import '@fontsource/roboto/300.css'
+import '@fontsource/roboto/400.css'
 
 const PagesLayout = ({ children, path }) => (
   <StaticQuery

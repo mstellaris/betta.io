@@ -15,7 +15,8 @@
     "clean:full": "rm -rf node_modules package-lock.json .cache public",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "format:check": "prettier -c ."
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.24.0",
@@ -26,6 +27,7 @@
     "prettier": "^3.3.3"
   },
   "dependencies": {
+    "@fontsource/roboto": "^5.1.0",
     "gatsby-plugin-image": "^3.15.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "disqus-react": "^1.1.7",
@@ -63,8 +65,6 @@
     "rehype-react": "^8.0.0",
     "sass": "^1.92.1",
     "sass-embedded": "^1.79.4",
-    "typeface-open-sans": "^1.1.13",
-    "typeface-roboto": "^1.1.13",
     "typography": "^0.16.18",
     "typography-theme-github": "^0.16.18"
   }
